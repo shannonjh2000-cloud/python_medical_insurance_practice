@@ -4,4 +4,63 @@ def estimate_insurance_cost(name, age, sex, bmi, num_of_children, smoker):
   print(name + "'s Estimated Insurance Cost: " + str(estimated_cost) + " dollars.")
   return estimated_cost
 
+# Estimate Suzanne's insurance cost 
+Suzanne_insurance_cost = calculate_insurance_cost("Suzanne", 35, 0, 26.4, 3, 0)
+print (suzanne_insurance_cost)
+
+# Estimate Lloyd's insurance cost
+lloyd_insurance_cost = calculate_insurance_cost ("Lloyd",35, 1, 22.2, 0, 1)
+print (lloyd_insurance_cost)
+
+# Estimate Kerri's insurance cost 
+Kerri_insurance_cost = calculate_insurance_cost ("Kerri", 42, 0, 18.2, 0, 1)
+print (Kerri_insurance_cost)
+
+# Calculate estimated insurance costs and sort estimated insurance cost into a list
+estimated_insurance_data = []
+estimated_insurance_data.append (("Suzanne", suzanne_insurance_cost))
+estimated_insurance_data.append(("Lloyd", lloyd_insurance_cost))
+estimated_insurance_data.append(("Kerri", kerri_insurance_cost))
+print("Here is the estimated insurance cost data: " + str(estimated_insurance_data))
   
+# Sort actual insurance costs into a list
+names = ["Suzanne", "Lloyd", "Kerri", "Mohamed", "Sara", "Xia", "Paul", "Valentina", "Jide", "Aaron", "Emily", "Nikita", "Paul]
+insurance_costs = [4150.0, 5320.0, 35210.0, 13262.0, 4816.0, 6839.0, 5054.0, 14724.0, 5360.0, 7640.0, 6072.0, 2750.0, 12064.0]
+
+# We forgot to add 'Priscilla's' data
+names.append("Priscilla")
+insurance.costs.append(8320.0)
+
+# Combine names and insurance_costs together into one list
+insurance_data = zip(names, insurance_costs)
+insurance_data = list(zip(names, insurance_costs))
+print(insurance_data)
+
+# How many records are on file 
+num_insurance_records = len(insurance_data)
+print("There are " + str(num_medical_records) + " insurance records.")
+
+# What is the first record on file 
+first_insurance_record = insurance_data[0]
+print("Here is the first insurance record: " + str(first_insurance_record))
+
+# Sort the records by cost
+insurance_data.sort()
+print("Here is the insurance data sorted by insurance cost: " + str(insurance_data))
+
+# Find the three cheapest medical insurance records
+cheapest_three = insurance_data[:3]
+print("Here are the three cheapest insurance costs in our records: " + str(cheapest_three))
+
+# Find the three most expensive medical insurance records
+priciest_three = insurance_data[-3:]
+print("Here are the three most expensive insurance costs in our records: " + str(priciest_three))
+
+# How many people have the same name
+occurences_paul = names.count("Paul")
+print("There are " + str(occurences_paul) + " individuals with the name Paul in our records")
+
+
+
+
+
