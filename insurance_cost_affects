@@ -1,0 +1,42 @@
+# insurance cost variables (sex: 0 = female, 1 = male) (smoker: 0 = non-smoker, 1 = smoker)
+age = 30
+sex = 0
+bmi = 21.3
+num_of_children = 2 
+smoker = 0
+
+# insurance estimate formula
+insurance_cost = 250 * age - 128 * sex + 370 * bmi + 425 * num_of_children + 24000 * smoker - 12500
+print("This person's insurance cost is " + str(insurance_cost) + " dollars. ")
+
+# How is the price of insurance affected by age
+age += 4
+new_insurance_cost = 250 * age - 128 * sex + 370 * bmi + 425 * num_of_children + 24000 * smoker - 12500
+print("This person's insurance cost is " + str(new_insurance_cost) + " dollars.")
+
+change_in_insurance_cost = new_insurance_cost - insurance_cost
+print ("The change in cost of insurance after increasing the age by 4 years is " +  str(change_in_insurance_cost) + " dollars. ")
+
+# How is the price of insurance affected by BMI
+age = 30
+bmi += 3.1
+new_insurance_cost = 250 * age - 128 * sex + 370 * bmi + 425 * num_of_children + 24000 * smoker - 12500
+print("This person's insurance cost is " + str(new_insurance_cost) + " dollars.")
+change_in_insurance_cost = new_insurance_cost - insurance_cost
+print ('The change in estimated insurance cost after increasing BMI by 3.1 is ' + str(change_in_insurance_cost) + ' dollars.')
+
+# How is the price of insurance affected by sex 
+bmi = 21.3
+sex += 1
+new_insurance_cost = 250 * age - 128 * sex + 370 * bmi + 425 * num_of_children + 24000 * smoker - 12500
+print("This person's insurance cost is " + str(new_insurance_cost) + " dollars.")
+change_in_insurance_cost = new_insurance_cost - insurance_cost
+print ('The change in estimated cost for being male instead of female is ' + str(change_in_insurance_cost) + ' dollars.')
+
+# How is the price of insurance affected if you have less children 
+num_of_children = 1
+sex = 0 
+new_insurance_cost = 50 * age - 128 * sex + 370 * bmi + 425 * num_of_children + 24000 * smoker - 12500
+print("This person's insurance cost is " + str(new_insurance_cost) + " dollars.")
+change_in_insurance_cost = new_insurance_cost - insurance_cost
+print ('The change in estimated cost for people a female with 1 child is ' + str(change_in_insurance_cost) + ' dollars.')
